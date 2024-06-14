@@ -1,0 +1,10 @@
+#chatSearchInput {
+  width: 95%;
+  padding: 7px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  box-sizing: border-box;
+  color: #ccc;
+  background: rgb(47, 47, 47);
+}

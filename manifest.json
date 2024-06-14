@@ -1,0 +1,20 @@
+{
+  "manifest_version": 3,
+  "name": "ChatGPT Search Filter",
+  "version": "1.0",
+  "description": "Fagner Menezes - Agger",
+  "permissions": ["activeTab", "scripting"],
+  "host_permissions": ["*://chatgpt.com/*"],
+  "content_scripts": [
+    {
+      "run_at": "document_start",
+      "matches": ["*://chatgpt.com/*"],
+      "js": ["content.js"],
+      "css": ["style.css"]
+    }
+  ],
+  "icons": {
+    "48": "icons/icon48.png",
+    "128": "icons/icon128.png"
+  }
+}
