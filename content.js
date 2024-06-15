@@ -22,7 +22,12 @@ function listenChatContainer() {
     searchInput.addEventListener('input', function () {
       const searchTerm = searchInput.value.toLowerCase();
       const chatNodes = document.querySelectorAll(chatSelector);
-
+      const spans = chatContainer.querySelectorAll('span.flex.h-9');
+      if (spans.length > 0) {
+        spans.forEach((item) => {
+          item.style.display = searchTerm ? 'none' : '';
+        });
+      }
       chatNodes.forEach((chat) => {
         const chatText = chat.textContent.toLowerCase();
         if (chatText.includes(searchTerm)) {
